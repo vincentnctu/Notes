@@ -1,0 +1,20 @@
+## Code Review in github ##
+ - No review flag / Reviewer(?) compared with bugzilla
+	 - Gerrit could be an option.   
+ - Can we attach different file format in github when reports a issue?
+	 - May use markdown syntax(?)
+ - Can we have review history using github? 
+ - Gerrit helps to improve code review flow. 
+	 - Can try it for free in http://gerrithub.io/
+
+## Define Bugzilla element ##
+
+ - Define product, I guess we should have following products
+	 - Smart phone / feature phone
+	 - TV / STB
+ - Can't use Ni ? 
+ - Customize flag we need 
+ - We need to have autolander if we chose github and bugzilla. 
+ - Define component
+	 - Except components for Firefox OS, there are still a lot of components in core/..... owned by platform team(?)
+
