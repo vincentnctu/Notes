@@ -1,0 +1,52 @@
+    Add alias in .gitconfig 
+    [alias] 
+      lo = log --oneline
+      br = branch
+      cbr = rev-parse --abbrev-ref HEAD
+      df = diff
+      dt = difftool
+      mt = mergetool
+      st = status
+      co = checkout
+      ci = commit
+      cp = cherry-pick
+
+## Normal flow to submit a patch ##
+ - Update latest code from server
+	 - git co master
+	 - git pull 
+ - Create a branch for the bug
+	 - git co -b bug-number
+ - Start to modify your source code in local branch. 
+ - Check your modification before creates commits. 
+	 - git st
+ - Commit the modification
+	 - git ci -am "bug-number - fix something. r=xxx"
+
+## Tips on rebase your local branch ##
+
+ - Try to rebase by create new branch 
+	 - git checkout -b bug-number-r1
+	 - git pull --rebase upstream master
+ - If everything works fine, try to rebase for your working branch. 
+	 - git co bug-number
+	 - git pull --rebase upstream master
+	 - git branch -D my-code-fix-r1 => delete try one. 
+
+## Tips for conflict when applying patches ##
+
+ - Apply the patch to local branch, nothing happen if command is failed
+	 - git apply sample.patch
+ - Apply the patch as possible as it can, the conflict part will be saved as *.rej files in the corresponding files in the folders. 
+	 - git apply --reject sample.patch
+ - Use below command to know details of *.rej. 
+	 - git status 
+ - Solution when we have *.rej conflicts. 
+	 - Use wiggle(Might has some risks using wiggle)
+		 - Install wiggle
+			 - sudo apt-get install -y wiggle
+		 - Try to fix 
+			 - wiggle --repalce foo.cpp foo.cpp.rej
+		 - Check auto fix results
+			 - meld foo.cpp foo.cpp.porig
+	 - Fix it manually
