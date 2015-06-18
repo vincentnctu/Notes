@@ -1,20 +1,30 @@
 ## Code Review in github ##
- - No review flag / Reviewer(?) compared with bugzilla
-	 - Gerrit could be an option.   
+ - Github doesn't provide review flag / select eviewer(?) compared with bugzilla
+	 - Gerrit could be an option. 
+	 - Review board seems the other option
  - Can we attach different file format in github when reports a issue?
 	 - May use markdown syntax(?)
  - Can we have review history using github? 
- - Gerrit helps to improve code review flow. 
+ - Gerrit helps to improve code review flow, but it's not necessary to have gerrit in the first phase.  
 	 - Can try it for free in http://gerrithub.io/
+	 - We can also host it in AWS. 
 
 ## Define Bugzilla element ##
 
  - Define product, I guess we should have following products
 	 - Smart phone / feature phone
 	 - TV / STB
- - Can't use Ni ? 
+ - Can't use Ni ?
  - Customize flag we need 
- - We need to have autolander if we chose github and bugzilla. 
+ - We need to have autolander if we chose github and bugzilla.
+ - Need bugzilla APIs   
  - Define component
 	 - Except components for Firefox OS, there are still a lot of components in core/..... owned by platform team(?)
 
+ 
+ - Some resources from internet:
+	 - [1] Gerrit Youtube video - https://www.youtube.com/watch?v=Wxx8XndqZ7A
+	 - [2] Github and gerrit - http://gerrithub.io/
+	 - [3] Jira agent in Taiwan - http://www.linksoft.com.tw/products.asp?seq=242
+	 - [4] Document about gerrit - https://www.packtpub.com/books/content/using-gerrit-github 
+	 - [5] Review board - https://www.reviewboard.org/
